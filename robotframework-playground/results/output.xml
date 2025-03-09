@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-09T02:17:25.772011" rpa="false" schemaversion="5">
+<suite id="s1" name="02 First-Browser-Test" source="D:\RobotWorkspace\Training\robotframework-playground\day1\tests\02_first-browser-test.robot">
+<test id="s1-t1" name="My First Test" line="16">
+<kw name="Open My Browser">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-03-09T02:17:25.895932" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-03-09T02:17:25.896558" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\RobotWorkspace\\Training\\robotframework-playground\\results\\browser\\traces\\temp\\5e04e40e-5ff4-45cc-b96b-11ba8dfdd644"}</msg>
+<msg time="2025-03-09T02:17:25.914420" level="INFO">Starting Browser process D:\RobotWorkspace\Training\robotframework-playground\.venv\Lib\site-packages\Browser\wrapper\index.js using port 56087</msg>
+<msg time="2025-03-09T02:17:25.914515" level="INFO">Node startup parameters: ['node', 'D:\\RobotWorkspace\\Training\\robotframework-playground\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '56087']</msg>
+<msg time="2025-03-09T02:17:26.534697" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\RobotWorkspace\\Training\\robotframework-playground\\results\\browser\\traces\\temp\\5e04e40e-5ff4-45cc-b96b-11ba8dfdd644"}</msg>
+<msg time="2025-03-09T02:17:26.535799" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-03-09T02:17:26.547632" level="INFO">Successfully created context. </msg>
+<msg time="2025-03-09T02:17:26.547696" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-03-09T02:17:27.615972" level="INFO">Successfully initialized new page object and opened url: https://www.playwright.dev/</msg>
+<arg>browser=${browser}</arg>
+<arg>headless=${headless}</arg>
+<arg>url=${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-03-09T02:17:25.895132" elapsed="1.721114"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T02:17:27.616667" level="INFO">I opened the browser</msg>
+<arg>I opened the browser</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T02:17:27.616467" elapsed="0.000249"/>
+</kw>
+<status status="PASS" start="2025-03-09T02:17:25.894123" elapsed="1.722677"/>
+</kw>
+<kw name="Take Screenshot With Arguments">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-03-09T02:17:27.829711" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>fullPage=${fullPage}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-03-09T02:17:27.617467" elapsed="0.212402"/>
+</kw>
+<arg>fullPage=${True}</arg>
+<status status="PASS" start="2025-03-09T02:17:27.617102" elapsed="0.212857"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-03-09T02:17:27.868239" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-09T02:17:27.830227" elapsed="0.038167"/>
+</kw>
+<doc>This will open a browser and take a screenshot</doc>
+<tag>browser</tag>
+<tag>my_browser_tag</tag>
+<status status="PASS" start="2025-03-09T02:17:25.892819" elapsed="1.975836"/>
+</test>
+<doc>This is playwright browser test</doc>
+<status status="PASS" start="2025-03-09T02:17:25.773142" elapsed="2.116179"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">browser</stat>
+<stat pass="1" fail="0" skip="0">my_browser_tag</stat>
+</tag>
+<suite>
+<stat name="02 First-Browser-Test" id="s1" pass="1" fail="0" skip="0">02 First-Browser-Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-09T02:17:25.895932" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
