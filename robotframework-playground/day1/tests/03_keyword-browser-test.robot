@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       These test cases will focus on the browser keywords
-...                 and how to use them, inclduing context and page keywords
+...                 and how to use them, inclduing context and page keywords.
 
 Library             Browser
 Library             Collections

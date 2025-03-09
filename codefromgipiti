@@ -1,144 +1,156 @@
-
-
 # Code Examples for Test Automation Training with Robot Framework & Playwright
 
 # --- Day 1: Introduction & Basics ---
 
 # Example 1: Running Your First Test
-*** Settings ***
-Library    Browser
 
-*** Test Cases ***
+**_ Settings _**
+Library Browser
+
+**_ Test Cases _**
 Open Google and Search
-    [Documentation]    Open Google and perform a search
-    New Browser    browser=chromium    headless=False
-    New Page    https://www.google.com
-    Fill Text    input[name="q"]    Robot Framework
-    Press Keys    input[name="q"]    ENTER
-    Wait For Elements State    css=search    visible
-    Close Browser
+[Documentation] Open Google and perform a search
+New Browser browser=chromium headless=False
+New Page https://www.google.com
+Fill Text input[name="q"] Robot Framework
+Press Keys input[name="q"] ENTER
+Wait For Elements State css=search visible
+Close Browser
 
 # Example 2: Test Case Structure
-*** Settings ***
-Library    Browser
 
-*** Variables ***
-${URL}    https://www.google.com
+**_ Settings _**
+Library Browser
 
-*** Test Cases ***
+**_ Variables _**
+${URL} https://www.google.com
+
+**_ Test Cases _**
 Open Google and Close
-    Open Browser    ${URL}    chrome
-    Close Browser
+Open Browser ${URL} chrome
+Close Browser
 
 # --- Day 2: Intermediate Concepts & Best Practices ---
 
 # Example 3: Using Variables
-*** Variables ***
-${URL}    https://www.example.com
-${BROWSER}    chromium
-${SEARCH_TERM}    Robot Framework
 
-*** Test Cases ***
+**_ Variables _**
+${URL}    https://www.example.com
+${BROWSER} chromium
+${SEARCH_TERM} Robot Framework
+
+**_ Test Cases _**
 Open Example Page
-    New Browser    browser=${BROWSER}    headless=False
-    New Page    ${URL}
-    Close Browser
+New Browser browser=${BROWSER} headless=False
+New Page ${URL}
+Close Browser
 
 # Example 4: Custom Keywords & Functions
-*** Keywords ***
+
+**_ Keywords _**
 Open Web Page
-    [Arguments]    ${url}
-    New Browser    browser=chromium    headless=False
-    New Page    ${url}
+[Arguments] ${url}
+New Browser browser=chromium headless=False
+New Page ${url}
 
 Search for Term
-    [Arguments]    ${query}
-    Fill Text    input[name="q"]    ${query}
-    Press Keys    input[name="q"]    ENTER
-    Wait For Elements State    css=search    visible
+[Arguments] ${query}
+Fill Text input[name="q"] ${query}
+Press Keys input[name="q"] ENTER
+Wait For Elements State css=search visible
 
-*** Test Cases ***
+**_ Test Cases _**
 Perform Search
-    Open Web Page    https://www.google.com
-    Search for Term    ${SEARCH_TERM}
-    Close Browser
+Open Web Page https://www.google.com
+Search for Term ${SEARCH_TERM}
+Close Browser
 
 # Example 5: Data-Driven Testing with Test Templates
-*** Test Cases ***
-Search Multiple Terms
-    [Template]    Search Google
-    Robot Framework
-    Playwright Library
-    Test Automation
-    Web Scraping
 
-*** Keywords ***
+**_ Test Cases _**
+Search Multiple Terms
+[Template] Search Google
+Robot Framework
+Playwright Library
+Test Automation
+Web Scraping
+
+**_ Keywords _**
 Search Google
-    [Arguments]    ${query}
-    New Browser    browser=chromium    headless=False
-    New Page    https://www.google.com
-    Fill Text    input[name="q"]    ${query}
-    Press Keys    input[name="q"]    ENTER
-    Close Browser
+[Arguments] ${query}
+New Browser browser=chromium headless=False
+New Page https://www.google.com
+Fill Text input[name="q"] ${query}
+Press Keys input[name="q"] ENTER
+Close Browser
 
 # Example 6: Assertions & Validations
-*** Test Cases ***
+
+**_ Test Cases _**
 Verify Page Title
-    New Browser    browser=chromium    headless=False
-    New Page    https://www.example.com
-    ${title}    Get Title
-    Should Be Equal    ${title}    Example Domain
-    Close Browser
+New Browser browser=chromium headless=False
+New Page https://www.example.com
+${title} Get Title
+Should Be Equal ${title} Example Domain
+Close Browser
 
 # --- Day 3: Advanced Topics & Project Work ---
 
 # Example 7: Handling Dynamic & Complex Elements
-*** Test Cases ***
+
+**_ Test Cases _**
 Handle Dynamic Content
-    New Browser    browser=chromium    headless=False
-    New Page    https://the-internet.herokuapp.com/dynamic_loading/1
-    Click    css=#start button
-    Wait For Elements State    css=#finish    visible    timeout=10s
-    ${text}    Get Text    css=#finish
-    Should Be Equal    ${text}    Hello World!
-    Close Browser
+New Browser browser=chromium headless=False
+New Page https://the-internet.herokuapp.com/dynamic_loading/1
+Click css=#start button
+Wait For Elements State css=#finish visible timeout=10s
+${text} Get Text css=#finish
+Should Be Equal ${text} Hello World!
+Close Browser
 
 # Example 8: Running Tests in CI/CD Pipelines
+
 name: Run Robot Tests
 
 on: [push]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: Install dependencies
-        run: |
-          pip install robotframework
-          pip install robotframework-browser
-          rfbrowser init
-      - name: Run tests
-        run: |
-          robot tests/
+test:
+runs-on: ubuntu-latest
+steps: - name: Checkout repository
+uses: actions/checkout@v3 - name: Setup Python
+uses: actions/setup-python@v4
+with:
+python-version: '3.9' - name: Install dependencies
+run: |
+pip install robotframework
+pip install robotframework-browser
+rfbrowser init - name: Run tests
+run: |
+robot tests/
 
 # Example 9: Debugging & Troubleshooting
-*** Test Cases ***
+
+**_ Test Cases _**
 Debugging Example
-    New Browser    browser=chromium    headless=False
-    New Page    https://www.google.com
-    Set Screenshot Directory    ${OUTPUT_DIR}
-    Capture Page Screenshot    debug_screenshot.png
-    Close Browser
+New Browser browser=chromium headless=False
+New Page https://www.google.com
+Set Screenshot Directory ${OUTPUT_DIR}
+Capture Page Screenshot debug_screenshot.png
+Close Browser
 
 # Example 10: Final Hands-on Project
+
 # Sites to use for practice:
+
 # - https://the-internet.herokuapp.com/
-# - https://www.saucedemo.com/
+
 # - https://demoqa.com/
-# - https://automationpractice.com/
+
+# - https://practicesoftwaretesting.com/
+
+# - https://example.cypress.io/
+
+# - https://letcode.in/test
+
+# - http://www.uitestingplayground.com/
