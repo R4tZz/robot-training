@@ -123,7 +123,7 @@ In Robot Framework, **Tagging**, **Documentation**, and **Logging** are useful f
 - **How to Use**:
   - Tags are defined by adding them after the test case name.
   - You can use multiple tags for a single test case.
-- When running tests, you can filter tests by tags using the `--tag` option.
+- When running tests, you can filter tests by tags using the `--include` option.
   - **Run Tests with a Specific Tag**: You can include tests with a specific tag.
   - **Exclude Tests with a Specific Tag**: You can exclude tests with a specific tag.
 

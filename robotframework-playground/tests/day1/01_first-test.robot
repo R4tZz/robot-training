@@ -10,7 +10,7 @@ ${my_variable}      Hello, World!
 
 *** Test Cases ***
 My First Test
-    [Documentation]    This is a simple test case
+    [Documentation]    This is my first test case using robot
     [Tags]    my_tag
     Log    ${my_variable}
     My Custom Keyword

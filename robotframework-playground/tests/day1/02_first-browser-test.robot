@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       This is playwright browser test
+Documentation       This is a simple test case using Playwright Browser library
 
 Library             Browser
 
@@ -14,7 +14,7 @@ ${url}          https://www.playwright.dev/
 
 *** Test Cases ***
 My First Test
-    [Documentation]    This will open a browser and take a screenshot
+    [Documentation]    This will open a browser with the Playwright url and take a screenshot
     [Tags]    my_browser_tag
     Open My Browser
     Take Screenshot With Arguments    fullPage=${True}

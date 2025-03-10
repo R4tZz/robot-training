@@ -27,11 +27,15 @@ Configurations arguments for the browser
 Multi context
     [Documentation]    This will open a browser with multiple contexts
     [Tags]    my_browser_tag
+    ## Override the URL variable for this test case.
+    ## This will help to visualize the context locale configuration.
     VAR    ${url}    https://www.google.com/
+    ## Finnish locale
     New Browser    browser=${browser}    headless=${headless}    timeout=${timeout}    slowMo=${slow_mo}
     New Context    baseURL=${url}    locale=fi-FI    viewport={"width": 1920, "height": 1024}    colorScheme=dark
     New Page    /    wait_until=domcontentloaded
     Take Screenshot    fullPage=${True}
+    ## Portuguese locale
     New Context    baseURL=${url}    locale=pt-PT    viewport={"width": 1920, "height": 1024}    colorScheme=light
     New Page    /    wait_until=domcontentloaded
     Take Screenshot    fullPage=${True}

@@ -58,8 +58,8 @@ Interact with Elements
 *** Test Cases ***
 Handle Multiple Pages
     New Browser    browser=chromium
-    New Page    https://example.com
     New Context
+    New Page    https://example.com
     New Page    https://another-example.com
     Close Browser
 ```
