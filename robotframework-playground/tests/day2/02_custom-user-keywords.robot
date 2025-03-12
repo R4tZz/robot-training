@@ -1,12 +1,9 @@
 *** Settings ***
-Documentation       This test demonstrates how to create custom keywords
+Documentation       This suite will deemonstrate how to create custom keywords
 
 Test Tags           this-is-test-tag
 
 Keyword Tags        this-is-keyword-tag
-
-
-*** Variables ***
 
 
 *** Test Cases ***
