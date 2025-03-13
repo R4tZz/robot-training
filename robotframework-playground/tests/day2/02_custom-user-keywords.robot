@@ -12,8 +12,12 @@ This Test Will Fail
     This keyword will fail
     Log    This keyword will not be executed
 
-Call Embedded Arguments Keyword
-    [Documentation]    Call the My keyword with embedded arguments
+Arguments Keywords
+    [Documentation]    This test will demonstrate how to use arguments in keywords
+    Default argument values
+    Default argument values    name=Robot    lastname=Framework
+    Variable arguments
+    Variable arguments    Robot    arg1    arg2    arg3
     My name is "Robot" and my last name is "Framework"
 
 Call Fibonacci Keyword
@@ -30,6 +34,18 @@ This keyword will fail
     [Tags]    robot:continue-on-failure
     Fail    This keyword always fails
     Log    This keyword will be executed
+
+Default argument values
+    [Documentation]    This keyword demonstrates how to use default argument values
+    [Arguments]    ${name}=John    ${lastname}=Doe
+    Log    My name is ${name} and my last name is ${lastname}
+
+Variable arguments
+    [Documentation]    This keyword demonstrates how to use variable arguments
+    [Arguments]    ${name}=John    @{args}
+    FOR    ${arg}    IN    @{args}
+        Log    ${arg}
+    END
 
 My name is "${name}" and my last name is "${lastname}"
     [Documentation]    This keyword demonstrates how to use embedded arguments

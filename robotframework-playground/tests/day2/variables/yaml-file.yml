@@ -1,0 +1,7 @@
+countries:
+  - name: USA
+    capital: Washington, D.C.
+  - name: Canada
+    capital: Ottawa
+  - name: Mexico
+    capital: Mexico City
