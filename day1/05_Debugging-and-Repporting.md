@@ -1,7 +1,5 @@
 # Debugging and Reporting in Robot Framework with the Browser Library
 
-## Introduction
-
 Debugging is an essential part of test automation, helping to identify and resolve issues in test scripts efficiently. The Robot Framework Browser library, powered by Playwright, provides powerful tools for debugging, logging, and reporting to enhance test reliability and maintainability.
 
 ---

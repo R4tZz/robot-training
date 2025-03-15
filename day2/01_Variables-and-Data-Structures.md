@@ -1,7 +1,5 @@
 # Robot Framework Variables
 
-## Introduction
-
 Variables in Robot Framework make test scripts dynamic and reusable. They allow storing values, lists, dictionaries, and system environment values. Robot Framework also provides special variables and escape characters to manage test data efficiently. In this guide, we explore the different types of variables, their usage, scope, and best practices.
 
 ---
