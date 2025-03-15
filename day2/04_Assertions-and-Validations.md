@@ -17,7 +17,7 @@ Robot Framework provides a set of built-in keywords that allow for straightforwa
 - **`Should Contain`** – Checks if a string or list contains a specific value.
 - **`Should Not Contain`** – Ensures a string or list does not contain a specific value.
 - **`Should Be True`** – Fails if the given expression does not evaluate to `True`.
-- **`Should Be False`** – Fails if the given expression evaluates to `True`.
+- **`Should Not Be True`** – Fails if the given expression evaluates to `True`.
 
 ### Example 1: Basic Assertions
 
