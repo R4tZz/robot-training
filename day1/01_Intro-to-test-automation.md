@@ -109,7 +109,7 @@ Acceptance testing checks if the software meets the business requirements and is
 **Example:**
 For a project management tool, automated acceptance tests could simulate a user creating a project, assigning tasks, setting deadlines, and tracking progress. These tests would validate that the application meets the business requirements.
 
-## What is Robot Framework?
+## **What is Robot Framework?**
 
 Robot Framework is an open-source, generic test automation framework designed to automate acceptance testing and robotic process automation (RPA). It uses a keyword-driven approach, meaning test cases are written using high-level keywords that represent actions, conditions, and assertions. The framework supports various test libraries and tools and can be extended with custom libraries written in Python or Java.
 
@@ -185,4 +185,3 @@ Robot Framework is best suited for:
 - **Cross-Technology Automation**: It is a great choice for organizations that need a unified automation solution for different types of applications, not just web testing.
 
 In summary, Robot Framework is a versatile tool that fits well in projects that require test automation across different layers (web, API, database, RPA). It stands out for its ease of use and accessibility for teams with mixed skill sets. While tools like Cypress and Playwright may offer more specialized features for web testing, Robot Framework excels in its ability to integrate different automation tasks under one framework.
-
